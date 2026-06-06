@@ -1,4 +1,11 @@
-"profile": {
+{
+  "seo": {
+    "title": "Alexander Vasquez | Mapa de Carreira em Tecnologia",
+    "description": "Mapa de carreira de Alexander Vasquez, com objetivos profissionais, trilha de aprendizagem, habilidades, idiomas e contatos.",
+    "author": "Alexander Vasquez",
+    "canonicalUrl": "https://exemplo.com/mapa-de-carreira/"
+  },
+  "profile": {
     "name": "Alexander Vasquez",
     "headline": "Desenvolvedor de Software & Especialista em Acessibilidade Web",
     "photo": "assets/images/alex_perfil.png",
@@ -6,13 +13,27 @@
     "summary": "Desenvolvedor focado em criar aplicações web modernas, robustas e totalmente inclusivas. Com sólida base em Java para o ecossistema backend e React no frontend, dedico meus projetos à implementação de camadas de acessibilidade digital avançadas (WCAG), garantindo que a tecnologia seja uma ferramenta democrática e utilizável por todas as pessoas.",
     "cvUrl": "#"
   },
+  "contacts": [
+    {
+      "label": "alexander.vasquez@example.com",
+      "url": "mailto:alexander.vasquez@example.com"
+    },
+    {
+      "label": "linkedin.com/in/alexandervasquez",
+      "url": "https://www.linkedin.com"
+    },
+    {
+      "label": "github.com/alexandervasquez",
+      "url": "https://github.com"
+    }
+  ],
   "careerSteps": [
     {
       "title": "Desenvolvedor Júnior (Full Stack & Inclusão)",
       "description": "Consolidar a integração de sistemas Java Web com o ecossistema React/Vite. O grande foco nesta etapa é aplicar as diretrizes de acessibilidade (WCAG) na prática e garantir a entrega de códigos limpos, funcionais e preparados para o mercado corporativo.",
       "softSkills": [
         "Comunicação clara para alinhamento em Squads de desenvolvimento.",
-        "Empatia aplicada ao design e arquitetura para compreender as necessidades do usuário final.",
+        "Empatia aplicada ao design e arquitetura para compreender as limitações do usuário final.",
         "Proatividade para investigar logs, depurar erros e propor soluções de forma autônoma."
       ],
       "roadmap": [
@@ -57,4 +78,53 @@
         "Observabilidade de Sistemas"
       ]
     }
+  ],
+  "skillGroups": [
+    {
+      "title": "Frontend",
+      "skills": [
+        {
+          "name": "HTML, CSS e JavaScript",
+          "level": 85
+        },
+        {
+          "name": "React & Vite",
+          "level": 75
+        }
+      ]
+    },
+    {
+      "title": "Backend e Dados",
+      "skills": [
+        {
+          "name": "Java Web",
+          "level": 80
+        },
+        {
+          "name": "SQL e Modelagem",
+          "level": 65
+        }
+      ]
+    }
+  ],
+  "otherSkills": [
+    "Git",
+    "GitHub",
+    "Acessibilidade Digital (WCAG)",
+    "Clean Code"
+  ],
+  "languages": [
+    {
+      "name": "Português",
+      "level": "Nativo"
+    },
+    {
+      "name": "Inglês",
+      "level": "Intermediário"
+    },
+    {
+      "name": "Espanhol",
+      "level": "Avançado"
+    }
   ]
+}
