@@ -1,0 +1,60 @@
+"profile": {
+    "name": "Alexander Vasquez",
+    "headline": "Desenvolvedor de Software & Especialista em Acessibilidade Web",
+    "photo": "assets/images/alex_perfil.png",
+    "photoAlt": "Foto profissional de Alexander Vasquez",
+    "summary": "Desenvolvedor focado em criar aplicações web modernas, robustas e totalmente inclusivas. Com sólida base em Java para o ecossistema backend e React no frontend, dedico meus projetos à implementação de camadas de acessibilidade digital avançadas (WCAG), garantindo que a tecnologia seja uma ferramenta democrática e utilizável por todas as pessoas.",
+    "cvUrl": "#"
+  },
+  "careerSteps": [
+    {
+      "title": "Desenvolvedor Júnior (Full Stack & Inclusão)",
+      "description": "Consolidar a integração de sistemas Java Web com o ecossistema React/Vite. O grande foco nesta etapa é aplicar as diretrizes de acessibilidade (WCAG) na prática e garantir a entrega de códigos limpos, funcionais e preparados para o mercado corporativo.",
+      "softSkills": [
+        "Comunicação clara para alinhamento em Squads de desenvolvimento.",
+        "Empatia aplicada ao design e arquitetura para compreender as necessidades do usuário final.",
+        "Proatividade para investigar logs, depurar erros e propor soluções de forma autônoma."
+      ],
+      "roadmap": [
+        "Java Web",
+        "React & Vite",
+        "HTML Semântico",
+        "CSS Responsivo",
+        "Git & GitHub",
+        "Diretrizes WCAG"
+      ]
+    },
+    {
+      "title": "Desenvolvedor Pleno (Engenharia & Autonomia)",
+      "description": "Conquistar total autonomia técnica na construção de APIs REST seguras e resilientes no backend e na componentização avançada no frontend. Implementar rotinas rigorosas de testes automatizados e revisar códigos do time para garantir a qualidade de software.",
+      "softSkills": [
+        "Maturidade e senso de dono para gerenciar prazos e entregas complexas.",
+        "Colaboração ativa através de Code Reviews construtivos e mentorias internas.",
+        "Capacidade de explicar e defender decisões de arquitetura técnica para stakeholders."
+      ],
+      "roadmap": [
+        "Spring Boot",
+        "TypeScript",
+        "APIs REST",
+        "Testes Automatizados",
+        "Modelagem SQL",
+        "Segurança da Informação"
+      ]
+    },
+    {
+      "title": "Especialista em Engenharia de Software / Arquiteto",
+      "description": "Desenhar arquiteturas de sistemas distribuídos na nuvem que sejam altamente escaláveis, seguros contra vulnerabilidades e imunes a gargalos de performance. Atuar como principal referência técnica na cultura de qualidade e acessibilidade avançada dentro da organização.",
+      "softSkills": [
+        "Mentoria com escuta ativa para impulsionar e acelerar desenvolvedores menos experientes.",
+        "Visão holística combinando impacto social, metas de negócio e viabilidade técnica.",
+        "Liderança técnica inspiradora e tomada de decisões complexas sob pressão."
+      ],
+      "roadmap": [
+        "Arquitetura de Microserviços",
+        "Cloud Computing (AWS/Oracle)",
+        "DevSecOps",
+        "Auditoria Avançada WCAG",
+        "Observabilidade de Sistemas"
+      ]
+    }
+  ]
