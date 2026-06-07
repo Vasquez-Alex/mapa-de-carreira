@@ -2,39 +2,39 @@
   "seo": {
     "title": "Alexander Vasquez | Mapa de Carreira em Tecnologia",
     "description": "Mapa de carreira de Alexander Vasquez, com objetivos profissionais, trilha de aprendizagem, habilidades, idiomas e contatos.",
-    "author": "Alexander Vasquez",
-    "canonicalUrl": "https://exemplo.com/mapa-de-carreira/"
+    "author": "Alexander Yeri Quispe Vasquez",
+    "canonicalUrl": "https://vasquez-alex.github.io/mapa-de-carreira-Alexander/"
   },
   "profile": {
     "name": "Alexander Vasquez",
-    "headline": "Desenvolvedor de Software & Especialista em Acessibilidade Web",
+    "headline": "Desenvolvedor de Software",
     "photo": "assets/images/alex_perfil.png",
-    "photoAlt": "Foto profissional de Alexander Vasquez",
-    "summary": "Desenvolvedor focado em criar aplicações web modernas, robustas e totalmente inclusivas. Com sólida base em Java para o ecossistema backend e React no frontend, dedico meus projetos à implementação de camadas de acessibilidade digital avançadas (WCAG), garantindo que a tecnologia seja uma ferramenta democrática e utilizável por todas as pessoas.",
-    "cvUrl": "#"
+    "photoAlt": "Foto profissional de Alexander Vasquez sorrindo, homem de cabelos longos pretos, oculos azuis, camisa azul com a logo do Proa.",
+    "summary": "Sou um desenvolvedor de software apaixonado por programação e tecnologia, com experiência em desenvolvimento web e projetos academicos. Tenho jabilidades em HTML, CSS, Javascript, React, Node.js, MySQL, PHP, Python< Java, C#, etc... Sou muito bom comunicador, organizado, curioso e minha paixão é o aprendizado continuo. Estou em busca de oportunidades para crescer profissionalmente, contribuir com projetos desafiadores e fazer a diferença com tecnologia como objetivo.",
+    "cvUrl": "assets/Outros/Proa_Alexander_Curriculo.pdf"
   },
   "contacts": [
     {
-      "label": "alexander.vasquez@example.com",
-      "url": "mailto:alexander.vasquez@example.com"
+      "label": "Meu E-mail:vasquez117033@gmail.com",
+      "url": "mailto:vasquez117033@gmail.com"
     },
     {
-      "label": "linkedin.com/in/alexandervasquez",
-      "url": "https://www.linkedin.com"
+      "label": "Meu Linkedin: alexander-yeri-quispe-vasquez",
+      "url": "www.linkedin.com/in/alexander-yeri-quispe-vasquez"
     },
     {
-      "label": "github.com/alexandervasquez",
-      "url": "https://github.com"
+      "label": "Meu GitHub: Vasquez-Alex",
+      "url": " https://github.com/Vasquez-Alex"
     }
   ],
   "careerSteps": [
     {
-      "title": "Desenvolvedor Júnior (Full Stack & Inclusão)",
-      "description": "Consolidar a integração de sistemas Java Web com o ecossistema React/Vite. O grande foco nesta etapa é aplicar as diretrizes de acessibilidade (WCAG) na prática e garantir a entrega de códigos limpos, funcionais e preparados para o mercado corporativo.",
+      "title": "Desenvolvedor Júnior (Full Stack & Acessibilidade)",
+      "description": "Consolidar a integração prática entre sistemas Java Web e interfaces dinâmicas em React. O grande foco nesta etapa é aplicar as diretrizes de acessibilidade (WCAG) na construção de aplicações inclusivas e dominar padrões de código limpo.",
       "softSkills": [
-        "Comunicação clara para alinhamento em Squads de desenvolvimento.",
-        "Empatia aplicada ao design e arquitetura para compreender as limitações do usuário final.",
-        "Proatividade para investigar logs, depurar erros e propor soluções de forma autônoma."
+        "Comunicação clara e assertiva para atuar em Squads multidisciplinares.",
+        "Empatia para compreender as reais necessidades e limitações do usuário final.",
+        "Curiosidade e persistência para analisar logs, investigar problemas e propor soluções."
       ],
       "roadmap": [
         "Java Web",
@@ -42,39 +42,39 @@
         "HTML Semântico",
         "CSS Responsivo",
         "Git & GitHub",
-        "Diretrizes WCAG"
+        "Acessibilidade (WCAG)"
       ]
     },
     {
-      "title": "Desenvolvedor Pleno (Engenharia & Autonomia)",
-      "description": "Conquistar total autonomia técnica na construção de APIs REST seguras e resilientes no backend e na componentização avançada no frontend. Implementar rotinas rigorosas de testes automatizados e revisar códigos do time para garantir a qualidade de software.",
+      "title": "Desenvolvedor Pleno (Engenharia de Software & Segurança)",
+      "description": "Atuar com total autonomia no desenvolvimento de APIs REST funcionais e seguras conectadas a bancos de dados relacionais. Implementar rotinas completas de testes automatizados e liderar processos de Code Review dentro do time.",
       "softSkills": [
-        "Maturidade e senso de dono para gerenciar prazos e entregas complexas.",
-        "Colaboração ativa através de Code Reviews construtivos e mentorias internas.",
-        "Capacidade de explicar e defender decisões de arquitetura técnica para stakeholders."
+        "Responsabilidade e maturidade sobre as entregas e prazos combinados.",
+        "Mentalidade analítica para identificar possíveis brechas de segurança no código.",
+        "Capacidade de explicar e defender escolhas arquiteturais para o time técnico."
       ],
       "roadmap": [
         "Spring Boot",
         "TypeScript",
         "APIs REST",
+        "MySQL & Modelagem",
         "Testes Automatizados",
-        "Modelagem SQL",
-        "Segurança da Informação"
+        "Segurança (Autenticação JWT)"
       ]
     },
     {
-      "title": "Especialista em Engenharia de Software / Arquiteto",
-      "description": "Desenhar arquiteturas de sistemas distribuídos na nuvem que sejam altamente escaláveis, seguros contra vulnerabilidades e imunes a gargalos de performance. Atuar como principal referência técnica na cultura de qualidade e acessibilidade avançada dentro da organização.",
+      "title": "Liderança Técnica / Arquiteto de Software",
+      "description": "Desenhar a arquitetura de sistemas distribuídos altamente escaláveis e resilientes na nuvem. Atuar como referência técnica da organização, estabelecendo padrões de segurança cibernética e guiando novos talentos.",
       "softSkills": [
         "Mentoria com escuta ativa para impulsionar e acelerar desenvolvedores menos experientes.",
-        "Visão holística combinando impacto social, metas de negócio e viabilidade técnica.",
-        "Liderança técnica inspiradora e tomada de decisões complexas sob pressão."
+        "Visão holística e sistêmica conectando produto, segurança e impacto social.",
+        "Tomada de decisões complexas de arquitetura com base em dados e contexto."
       ],
       "roadmap": [
-        "Arquitetura de Microserviços",
+        "Arquitetura de Software",
         "Cloud Computing (AWS/Oracle)",
-        "DevSecOps",
-        "Auditoria Avançada WCAG",
+        "Segurança Avançada (Cybersecurity)",
+        "DevSecOps & CI/CD",
         "Observabilidade de Sistemas"
       ]
     }
@@ -88,43 +88,60 @@
           "level": 85
         },
         {
-          "name": "React & Vite",
-          "level": 75
+          "name": "React",
+          "level": 80
         }
       ]
     },
     {
-      "title": "Backend e Dados",
+      "title": "Backend e dados",
       "skills": [
         {
-          "name": "Java Web",
+          "name": "Node.js e APIs",
+          "level": 65
+        },
+        {
+          "name": "Python e Java web",
           "level": 80
         },
         {
-          "name": "SQL e Modelagem",
-          "level": 65
+          "name": "PHP e C#",
+          "level": 50
+        },
+        {
+          "name": "MySQL",
+          "level": 70
         }
       ]
     }
   ],
   "otherSkills": [
     "Git",
-    "GitHub",
-    "Acessibilidade Digital (WCAG)",
-    "Clean Code"
+    "Comunicacao",
+    "Organizacao",    
+    "Documentacao",
+    "Code review"
   ],
   "languages": [
     {
-      "name": "Português",
+      "name": "Portugues",
       "level": "Nativo"
     },
     {
-      "name": "Inglês",
-      "level": "Intermediário"
+      "name": "Ingles",
+      "level": "Tecnico"
     },
     {
       "name": "Espanhol",
       "level": "Avançado"
+    },
+    {
+      "name": "Frances",
+      "level": "Basico"
+    },
+    {
+      "name": "Japones",
+      "level": "Basico"
     }
   ]
 }
