@@ -48,14 +48,12 @@
 			margin-bottom: .35rem;
 		}
 
-		/* --- 1. ÍCONES E MOVIMENTO NOS LINKS DE CONTATO --- */
         #contact-list li {
             position: relative;
-            padding-left: 28px; /* Abre espaço para o ícone */
+            padding-left: 28px; 
             transition: transform 0.2s ease;
         }
 
-        /* Detecta o tipo de contato pelo texto e injeta o ícone correspondente */
         #contact-list li:has(a[href^="mailto"])::before {
             content: "📧";
             position: absolute;
@@ -77,9 +75,8 @@
             top: 2px;
         }
 
-        /* Efeito de movimento ao passar o mouse nos contatos */
         #contact-list li:hover {
-            transform: translateX(6px); /* O contato desliza levemente para a direita */
+            transform: translateX(6px); 
         }
 
         #contact-list li a {
@@ -88,7 +85,6 @@
         }
 
 
-        /* --- 2. ÍCONES NA LISTA DE IDIOMAS --- */
         #language-list li {
             position: relative;
             padding-left: 25px;
@@ -96,7 +92,6 @@
             transition: transform 0.2s ease;
         }
 
-        /* Coloca um ícone de balão de fala universal antes de cada idioma */
         #language-list li::before {
             content: "🗣️";
             position: absolute;
@@ -105,32 +100,24 @@
             font-size: 0.9rem;
         }
 
-        /* Movimento sutil ao passar o mouse no idioma */
         #language-list li:hover {
             transform: translateX(4px);
         }
 
-
-        /* --- 3. MOVIMENTO AO PASSAR O MOUSE NOS TÓPICOS/SEÇÕES --- */
-        
-        /* Aplica o efeito nos grandes blocos (Perfil, Mapa de Carreira, Habilidades) */
         .resume-section {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-radius: 6px;
         }
 
-        /* Quando você passa o mouse na seção inteira, ela ganha um destaque sutil */
         .resume-section:hover {
-            transform: scale(1.01); /* Dá um zoom quase imperceptível, muito elegante */
+            transform: scale(1.01);
         }
 
-        /* Efeito interativo nas Tags de Tecnologias/Roadmap */
         .list-inline-item .badge, #other-skills .badge {
             transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
             cursor: default;
         }
 
-        /* Faz os pequenos blocos de tecnologia "pularem" e brilharem ao passar o mouse */
         .list-inline-item .badge:hover, #other-skills .badge:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 4px 8px rgba(89, 87, 142, 0.25);
@@ -138,7 +125,6 @@
             color: #ffffff !important;
         }
 
-        /* Melhora o comportamento dos links do menu de navegação do cabeçalho */
         .resume-social a {
             display: inline-block;
             transition: transform 0.2s ease, color 0.2s ease;
@@ -146,7 +132,16 @@
         }
 
         .resume-social a:hover {
-            transform: translateY(-2px); /* Links do menu sobem de leve */
+            transform: translateY(-2px);
+        }
+
+		.profile-picture {
+            max-width: 180px; 
+            width: 100%;
+            object-fit: contain; 
+            border-radius: 12px; 
+            display: block;
+            margin: 0 auto;
         }
 
 		
