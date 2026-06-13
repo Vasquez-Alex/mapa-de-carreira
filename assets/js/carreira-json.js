@@ -86,10 +86,10 @@ const renderProfile = ({ profile, contacts }) => {
 
 	contacts.forEach((contact) => {
     const listItem = createElement("li", "mb-2");
-    const link = createElement("a", "text-link", contact.label); // <-- Cria a tag <a>
+    const link = createElement("a", "text-link", contact.label); 	
     link.href = contact.url;
 
-    if (contact.url.startsWith("http")) { // <-- OLHA AQUI O DETALHE!
+    if (contact.url.startsWith("http")) { 
         link.target = "_blank";
         link.rel = "noopener";
     }

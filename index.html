@@ -54,7 +54,6 @@
             margin-bottom: 0.5rem !important;
             display: flex !important;
             align-items: center !important; 
-            
             transition: transform 0.2s ease-in-out !important;
         }
 
@@ -64,36 +63,18 @@
             font-size: 1.1rem;
             display: flex;
             align-items: center;
-            height: 100%; /
+            height: 100%;
+            pointer-events: none !important; 
         }
 
-        #contact-list li:has(a[href^="mailto"])::before {
-            content: "📧";
-            position: absolute;
-            left: 0;
-            top: 2px;
-        }
+        #contact-list li:has(a[href^="mailto"])::before { content: "✉️"; }
+        #contact-list li:has(a[href*="linkedin"])::before { content: "🔗"; }
+        #contact-list li:has(a[href*="github"])::before { content: "🐙"; }
+        #contact-list li:has(a[href*="instagram"])::before { content: "📸"; }
 
-        #contact-list li:has(a[href*="linkedin"])::before {
-            content: "💼";
-            position: absolute;
-            left: 0;
-            top: 2px;
+        #contact-list li:hover {
+            transform: translateX(8px) !important;
         }
-
-        #contact-list li:has(a[href*="github"])::before {
-            content: "💻";
-            position: absolute;
-            left: 0;
-            top: 2px;
-        }
-
-		#contact-list li:has(a[href*="instagram"])::before { 
-			content: "📸";
-			position: absolute;
-			left: 0;
-			top: 2px;
-		}
 
         #contact-list li:hover {
             transform: translateX(6px); 
