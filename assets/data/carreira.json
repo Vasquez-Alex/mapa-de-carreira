@@ -10,7 +10,7 @@
     "headline": "Desenvolvedor de Software",
     "photo": "assets/images/alex_perfil.png",
     "photoAlt": "Foto profissional de Alexander Vasquez sorrindo, homem de cabelos longos pretos, oculos azuis, camisa azul com a logo do Proa.",
-    "summary": "Sou um desenvolvedor de software apaixonado por programação e tecnologia, com experiência em desenvolvimento web e projetos academicos. Tenho jabilidades em HTML, CSS, Javascript, React, Node.js, MySQL, PHP, Python, Java, C#, etc... Sou muito bom comunicador, organizado, curioso e minha paixão é o aprendizado continuo. Estou em busca de oportunidades para crescer profissionalmente, contribuir com projetos desafiadores e fazer a diferença com tecnologia como objetivo.",
+    "summary": "Sou um desenvolvedor de software apaixonado por programação e tecnologia, com experiência em desenvolvimento web e projetos academicos. Tenho habilidades em HTML, CSS, Javascript, React, Node.js, MySQL, PHP, Python, Java, C#, etc... Sou muito bom comunicador, organizado, curioso e minha paixão é o aprendizado continuo. Estou em busca de oportunidades para crescer profissionalmente, contribuir com projetos desafiadores e fazer a diferença com tecnologia como objetivo.",
     "cvUrl": "assets/Outros/Proa_Alexander_Curriculo.pdf"
   },
   "contacts": [
@@ -25,12 +25,16 @@
     {
       "label": "Meu GitHub: Vasquez-Alex",
       "url": " https://github.com/Vasquez-Alex"
+    },
+    {
+      "label": "Meu Instagram: @alexander_vasquez_dev",
+      "url": " https://www.instagram.com/alexander_vasquez_dev"
     }
   ],
   "careerSteps": [
     {
       "title": "Desenvolvedor Júnior (Full Stack & Acessibilidade)",
-      "description": "Consolidar a integração prática entre sistemas Java Web e interfaces dinâmicas em React. O grande foco nesta etapa é aplicar as diretrizes de acessibilidade (WCAG) na construção de aplicações inclusivas e dominar padrões de código limpo.",
+      "description": "Consolidar a integração prática entre sistemas Java Web e interfaces dinâmicas em React. O grande foco nesta etapa é aplicar as diretrizes de acessibilidade (WCAG) na construção de aplicações inclusivas, dominando padrões de código limpo e colaboração em equipes ágeis.",
       "softSkills": [
         "Comunicação clara e assertiva para atuar em Squads multidisciplinares.",
         "Empatia para compreender as reais necessidades e limitações do usuário final.",
@@ -47,10 +51,10 @@
     },
     {
       "title": "Desenvolvedor Pleno (Engenharia de Software & Segurança)",
-      "description": "Atuar com total autonomia no desenvolvimento de APIs REST funcionais e seguras conectadas a bancos de dados relacionais. Implementar rotinas completas de testes automatizados e liderar processos de Code Review dentro do time.",
+      "description": "Atuar com autonomia no desenvolvimento de APIs REST funcionais e seguras conectadas a bancos de dados como MySQL. Implementar rotinas completas de testes automatizados, blindar o código com conceitos de cibersegurança e liderar processos de Code Review.",
       "softSkills": [
         "Responsabilidade e maturidade sobre as entregas e prazos combinados.",
-        "Mentalidade analítica para identificar possíveis brechas de segurança no código.",
+        "Mentalidade analítica voltada para a segurança e prevenção de brechas no código.",
         "Capacidade de explicar e defender escolhas arquiteturais para o time técnico."
       ],
       "roadmap": [
@@ -63,15 +67,31 @@
       ]
     },
     {
-      "title": "Liderança Técnica / Arquiteto de Software",
-      "description": "Desenhar a arquitetura de sistemas distribuídos altamente escaláveis e resilientes na nuvem. Atuar como referência técnica da organização, estabelecendo padrões de segurança cibernética e guiando novos talentos.",
+      "title": "Consultor de Tecnologia / Arquiteto de Soluções",
+      "description": "Atuar na interface entre o negócio e o código em grandes corporações e consultorias globais. Diagnosticar problemas complexos de clientes, desenhar estratégias de arquitetura técnica, apresentar soluções para stakeholders e planejar a execução técnica de projetos de grande impacto.",
+      "softSkills": [
+        "Pensamento estratégico e capacidade de planejamento de cenários de curto e longo prazo.",
+        "Habilidade de comunicação e oratória para realizar apresentações de alto impacto.",
+        "Visão analítica de processos corporativos B2B para gerar soluções eficientes."
+      ],
+      "roadmap": [
+        "Engenharia de Requisitos",
+        "Arquitetura de Soluções",
+        "Modelos de Negócios de TI",
+        "Gestão de Projetos (Scrum/Kanban)",
+        "Análise de Viabilidade Técnica"
+      ]
+    },
+    {
+      "title": "Liderança Técnica (Tech Lead) / Diretor de Engenharia",
+      "description": "Desenhar a arquitetura de sistemas distribuídos na nuvem e atuar como principal referência técnica e estratégica da organização. Unir a experiência de desenvolvimento e consultoria para guiar times de engenharia, estabelecer padrões e inspirar pessoas.",
       "softSkills": [
         "Mentoria com escuta ativa para impulsionar e acelerar desenvolvedores menos experientes.",
         "Visão holística e sistêmica conectando produto, segurança e impacto social.",
-        "Tomada de decisões complexas de arquitetura com base em dados e contexto."
+        "Liderança inspiradora e facilidade para tomada de decisões complexas sob pressão."
       ],
       "roadmap": [
-        "Arquitetura de Software",
+        "Arquitetura de Microserviços",
         "Cloud Computing (AWS/Oracle)",
         "Segurança Avançada (Cybersecurity)",
         "DevSecOps & CI/CD",
