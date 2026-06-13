@@ -10,7 +10,7 @@
     "headline": "Desenvolvedor de Software",
     "photo": "assets/images/alex_perfil.png",
     "photoAlt": "Foto profissional de Alexander Vasquez sorrindo, homem de cabelos longos pretos, oculos azuis, camisa azul com a logo do Proa.",
-    "summary": "Sou um desenvolvedor de software apaixonado por programação e tecnologia, com experiência em desenvolvimento web e projetos academicos. Tenho habilidades em HTML, CSS, Javascript, React, Node.js, MySQL, PHP, Python, Java, C#, etc... Sou muito bom comunicador, organizado, curioso e minha paixão é o aprendizado continuo. Estou em busca de oportunidades para crescer profissionalmente, contribuir com projetos desafiadores e fazer a diferença com tecnologia como objetivo.",
+    "summary": "Sou um desenvolvedor de software apaixonado por programação e tecnologia, com experiência em desenvolvimento web e projetos academicos. Tenho habilidades em HTML, CSS, Javascript, React, Node.js, MySQL, PHP, Python, Java, C#, crição de agentes de IA com chave API, etc... Sou muito bom comunicador, organizado, curioso e minha paixão é o aprendizado continuo. Estou em busca de oportunidades para crescer profissionalmente, contribuir com projetos desafiadores e fazer a diferença com tecnologia como objetivo.",
     "cvUrl": "assets/Outros/Proa_Alexander_Curriculo.pdf"
   },
   "contacts": [
@@ -24,11 +24,11 @@
     },
     {
       "label": "Meu GitHub: Vasquez-Alex",
-      "url": " https://github.com/Vasquez-Alex"
+      "url": "https://github.com/Vasquez-Alex"
     },
     {
       "label": "Meu Instagram: @alexander_vasquez_dev",
-      "url": " https://www.instagram.com/alexander_vasquez_dev"
+      "url": "https://www.instagram.com/alexander_vasquez_dev"
     }
   ],
   "careerSteps": [
@@ -140,7 +140,8 @@
     "Comunicacao",
     "Organizacao",    
     "Documentacao",
-    "Code review"
+    "Code review",
+    "agente de IA"
   ],
   "languages": [
     {
