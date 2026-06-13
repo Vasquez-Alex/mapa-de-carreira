@@ -50,8 +50,21 @@
 
         #contact-list li {
             position: relative;
-            padding-left: 28px; 
-            transition: transform 0.2s ease;
+            padding-left: 30px !important;
+            margin-bottom: 0.5rem !important;
+            display: flex !important;
+            align-items: center !important; 
+            
+            transition: transform 0.2s ease-in-out !important;
+        }
+
+        #contact-list li::before {
+            position: absolute;
+            left: 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            height: 100%; /
         }
 
         #contact-list li:has(a[href^="mailto"])::before {

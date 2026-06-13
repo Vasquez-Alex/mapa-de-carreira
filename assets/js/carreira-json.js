@@ -85,18 +85,18 @@ const renderProfile = ({ profile, contacts }) => {
 	contactList.innerHTML = "";
 
 	contacts.forEach((contact) => {
-		const listItem = createElement("li", "mb-2");
-		const link = createElement("a", "text-link", contact.label);
-		link.href = contact.url;
+    const listItem = createElement("li", "mb-2");
+    const link = createElement("a", "text-link", contact.label); // <-- Cria a tag <a>
+    link.href = contact.url;
 
-		if (contact.url.startsWith("http")) {
-			link.target = "_blank";
-			link.rel = "noopener";
-		}
+    if (contact.url.startsWith("http")) { // <-- OLHA AQUI O DETALHE!
+        link.target = "_blank";
+        link.rel = "noopener";
+    }
 
-		listItem.appendChild(link);
-		contactList.appendChild(listItem);
-	});
+    listItem.appendChild(link);
+    contactList.appendChild(listItem);
+});
 };
 
 const renderCareerTimeline = (careerSteps) => {
