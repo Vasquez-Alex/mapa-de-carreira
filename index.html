@@ -50,30 +50,29 @@
 
         #contact-list li {
             position: relative;
-            padding-left: 30px !important;
-            margin-bottom: 0.5rem !important;
-            display: flex !important;
-            align-items: center !important; 
-            transition: transform 0.2s ease-in-out !important;
+            padding-left: 28px; 
+            transition: transform 0.2s ease;
         }
 
-        #contact-list li::before {
+        #contact-list li:has(a[href^="mailto"])::before {
+            content: "📧";
             position: absolute;
             left: 0;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            pointer-events: none !important; 
+            top: 2px;
         }
 
-        #contact-list li:has(a[href^="mailto"])::before { content: "✉️"; }
-        #contact-list li:has(a[href*="linkedin"])::before { content: "🔗"; }
-        #contact-list li:has(a[href*="github"])::before { content: "🐙"; }
-        #contact-list li:has(a[href*="instagram"])::before { content: "📸"; }
+        #contact-list li:has(a[href*="linkedin"])::before {
+            content: "💼";
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
 
-        #contact-list li:hover {
-            transform: translateX(8px) !important;
+        #contact-list li:has(a[href*="github"])::before {
+            content: "💻";
+            position: absolute;
+            left: 0;
+            top: 2px;
         }
 
         #contact-list li:hover {
