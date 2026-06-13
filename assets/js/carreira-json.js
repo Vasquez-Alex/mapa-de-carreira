@@ -213,6 +213,30 @@ const parseCareerData = (jsonText) => {
 	}
 };
 
+const adjustProfileLayout = () => {
+        // Seleciona o container dos contatos e o corpo principal
+        const contactList = document.getElementById('contact-list');
+        const mainContent = document.getElementById('conteudo-principal');
+
+        if (contactList && mainContent) {
+            // Calcula a altura real dos seus contatos (incluindo o Instagram)
+            const contactsHeight = contactList.offsetHeight;
+
+            // No PC (resoluções maiores que 768px), movemos o conteúdo principal
+            // para baixo exatamente na mesma altura dos contatos, para que eles
+            // não sejam cobertos.
+            if (window.innerWidth > 768) {
+                // Adiciona um padding-top no <main> igual à altura dos contatos
+                mainContent.style.paddingTop = `${contactsHeight + 20}px`;
+                mainContent.style.marginTop = "0px"; // Zera qualquer margem negativa
+                mainContent.style.position = "relative"; // Garante fluxo correto
+            } else {
+                // No celular, removemos o padding para usar o layout padrão empilhado
+                mainContent.style.paddingTop = "0px";
+            }
+        }
+    };
+	
 fetch(DATA_URL)
 	.then((response) => {
 		if (!response.ok) {
@@ -229,3 +253,4 @@ fetch(DATA_URL)
 		main.prepend(warning);
 		console.error(error);
 	});
+
