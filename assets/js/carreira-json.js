@@ -82,21 +82,38 @@ const renderProfile = ({ profile, contacts }) => {
 	cvLink.setAttribute("aria-label", `Baixar curriculo de ${profile.name} em PDF`);
 
 	const contactList = document.getElementById("contact-list");
-	contactList.innerHTML = "";
+    contactList.innerHTML = "";
 
-	contacts.forEach((contact) => {
-    const listItem = createElement("li", "mb-2");
-    const link = createElement("a", "text-link", contact.label); 	
-    link.href = contact.url;
+    contacts.forEach((contact) => {
+        const listItem = createElement("li", "mb-2 d-flex align-items-center");
+        
+        const iconElement = document.createElement("i");
+        
+        if (contact.url.startsWith("mailto")) {
+            iconElement.className = "bi bi-envelope-fill me-2 text-primary"; // Ícone de Envelope
+        } else if (contact.url.includes("linkedin")) {
+            iconElement.className = "bi bi-linkedin me-2 text-primary";      // Ícone do LinkedIn
+        } else if (contact.url.includes("github")) {
+            iconElement.className = "bi bi-github me-2 text-primary";        // Ícone do GitHub
+        } else {
+            iconElement.className = "bi bi-link-45deg me-2 text-primary";    // Ícone de link padrão (caso adicione outro)
+        }
 
-    if (contact.url.startsWith("http")) { 
-        link.target = "_blank";
-        link.rel = "noopener";
-    }
+        iconElement.style.color = "#59578E"; 
+        iconElement.style.fontSize = "1.1rem";
 
-    listItem.appendChild(link);
-    contactList.appendChild(listItem);
-});
+        const link = createElement("a", "text-link", contact.label);
+        link.href = contact.url;
+
+        if (contact.url.startsWith("http")) {
+            link.target = "_blank";
+            link.rel = "noopener";
+        }
+
+        listItem.appendChild(iconElement);
+        listItem.appendChild(link);
+        contactList.appendChild(listItem);
+    });
 };
 
 const renderCareerTimeline = (careerSteps) => {
