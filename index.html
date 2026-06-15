@@ -100,6 +100,40 @@
             transition: color 0.2s ease;
         }
 
+        #contact-list a.text-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            text-decoration: none !important;
+            transition: color 0.2s ease-in-out !important;
+        }
+
+        #contact-list li:hover a.text-link {
+            color: #ffffff !important;
+            text-decoration: underline !important;
+        }
+
+        #contact-list li:active {
+            transform: scale(0.98) translateX(6px) !important;
+        }
+
+        .btn-primary, 
+        a[href*="Curriculo.pdf"],
+        button:has(text) { 
+            transition: all 0.25s ease-in-out !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover,
+        a[href*="Curriculo.pdf"]:hover {
+            transform: translateY(-2px) !important; 
+            box-shadow: 0 5px 15px rgba(89, 87, 142, 0.4) !important; 
+            filter: brightness(1.1); 
+        }
+
+        .btn-primary:active,
+        a[href*="Curriculo.pdf"]:active {
+            transform: translateY(1px) !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+        }
 
         #language-list li {
             position: relative;
