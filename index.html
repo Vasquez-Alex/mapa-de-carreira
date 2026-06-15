@@ -58,10 +58,8 @@
             transition: transform 0.2s ease-in-out !important;
         }
 
-        /* Configuração estrutural para injetar a fonte oficial do Bootstrap Icons */
         #contact-list li::before {
             font-family: "bootstrap-icons" !important;
-            speak: none;
             font-style: normal;
             font-weight: normal;
             font-variant: normal;
@@ -73,31 +71,25 @@
             position: absolute;
             left: 0;
             font-size: 1.1rem !important;
-            color: #ffffff !important; /* Força a cor branca para dar leitura no fundo roxo */
+            color: #ffffff !important; 
             pointer-events: none !important;
         }
 
-        /* ✉️ Injeta o ícone oficial de envelope no e-mail */
         #contact-list li:has(a[href^="mailto"])::before {
-            content: "\f32f" !important; 
+            content: "\f32e" !important; 
         }
 
-        /* 🔗 Injeta o logo oficial do LinkedIn */
         #contact-list li:has(a[href*="linkedin"])::before {
-            content: "\f471" !important; 
+            content: "\f472" !important; 
         }
 
-        /* 🐙 Injeta o logo oficial do GitHub */
         #contact-list li:has(a[href*="github"])::before {
             content: "\f3ed" !important; 
         }
 
-        /* Efeito de movimento ao passar o mouse */
         #contact-list li:hover {
             transform: translateX(6px) !important;
         }
-
-
 
         #contact-list li:hover {
             transform: translateX(6px); 
@@ -145,7 +137,7 @@
         .list-inline-item .badge:hover, #other-skills .badge:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 4px 8px rgba(89, 87, 142, 0.25);
-            background-color: #59578E !important; /* Fica com o roxo principal do Proa */
+            background-color: #59578E !important; 
             color: #ffffff !important;
         }
 
