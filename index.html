@@ -304,6 +304,23 @@
             margin-bottom: 0 !important;
             padding-bottom: 5px !important;
         }
+
+		/* Garante que o bloco branco nunca sobreponha o conteúdo do cabeçalho */
+        .resume-wrapper {
+            margin-top: 0 !important; /* Remove qualquer margem negativa que force a subida */
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Dá o espaçamento correto no cabeçalho para que nada fique colado ou cortado */
+        header .resume-wrapper-inner {
+            padding-bottom: 25px !important; /* Cria um colchão de espaço abaixo do GitHub */
+        }
+        
+        /* Se o tema original usar posicionamento relativo para puxar o main para cima, isso anula */
+        main#conteudo-principal {
+            top: 0 !important; 
+        }
 		
 	</style>
 </head>
