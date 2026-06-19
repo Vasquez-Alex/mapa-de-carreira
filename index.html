@@ -310,6 +310,20 @@
 				opacity: 0.7;
 			}
 		}
+
+		main#conteudo-principal.resume-wrapper {
+            margin-top: 0px !important;
+            padding-top: 2rem !important; /* Dá um respiro interno controlado apenas para baixo */
+            position: relative;
+            z-index: 1; /* Garante que fique na camada correta */
+        }
+
+        /* Garante que o header e os links fiquem na camada de cima, totalmente clicáveis */
+        header.resume-header {
+            position: relative;
+            z-index: 5 !important; /* Camada maior para sobrepor qualquer margem invisível */
+            pointer-events: auto !important; /* Força os eventos de clique a funcionarem */
+        }
 		
 	</style>
 </head>
