@@ -271,19 +271,40 @@
             background-color: #319795 !important;
         }
 
+		/* 1. Alinha o container das opções para o desktop */
+		header nav, 
+		header .text-white,
+		header div:has(a[href^="#"]) {
+			display: inline-block !important;
+			width: auto !important;
+			white-space: nowrap !important;
+		}
+
+		/* 2. Formata e dá um espaçamento menor e cirúrgico em cada opção */
 		header a[href^="#"], 
 		nav a[href^="#"],
 		.text-white a[href^="#"] {
-			display: inline-block !important;
-			margin-left: 15px !important; 
-			margin-right: 5px !important;
-			white-space: nowrap !important; 
+			display: inline-flex !important;
+			align-items: center !important;
+			margin-left: 8px !important;  /* Reduzido para caber na linha original */
+			margin-right: 2px !important;
+			font-size: 0.95rem !important; /* Um tiquinho menor para dar o respiro necessário */
+			text-decoration: none !important;
 			transition: color 0.2s ease-in-out, transform 0.2s ease-in-out !important;
 		}
 
+		/* Margem menor ainda se a tela for média, garantindo que não caia */
+		@media (max-width: 1200px) {
+			header a[href^="#"] {
+				margin-left: 5px !important;
+				font-size: 0.9rem !important;
+			}
+		}
+
+		/* Efeito de hover suave */
 		header a[href^="#"]:hover, 
 		nav a[href^="#"]:hover {
-			transform: translateY(-2px) !important; 
+			transform: translateY(-1px) !important;
 		}
 		
 	</style>
