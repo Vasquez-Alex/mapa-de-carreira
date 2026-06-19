@@ -39,14 +39,18 @@
             top: 1rem;
         }
 
-        /* 1. ATUALIZADO: FOTO PERFEITAMENTE REDONDA COM BORDA */
+        /* 1. CORREÇÃO DA FOTO: CÍRCULO PERFEITO NO MOBILE E PC */
         .profile-picture {
-            height: 220px;
-            width: 220px;
+            width: 220px !important;
+            min-width: 220px !important; /* Trava para não esticar no mobile */
+            height: 220px !important;
+            min-height: 220px !important;
             object-fit: cover;
-            border-radius: 50% !important; /* Torna redonda */
-            border: 4px solid #ffffff !important; /* Borda branca de destaque */
+            border-radius: 50% !important; 
+            border: 4px solid #ffffff !important; 
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            display: block;
+            margin: 0 auto;
         }
 
         .badge {
@@ -82,10 +86,9 @@
             pointer-events: none !important;
         }
 
-        /* 2. ATUALIZADO: DESTACANDO O ÍCONE DO EMAIL COM TURQUESA MAIS VIBRANTE NO FUNDO */
         #contact-list li:has(a[href^="mailto"])::before { 
             content: "\f32e" !important; 
-            color: #4fd1c5 !important; /* Turquesa neon para dar contraste */
+            color: #4fd1c5 !important; 
         }
         #contact-list li:has(a[href*="linkedin"])::before { content: "\f472" !important; }
         #contact-list li:has(a[href*="github"])::before { content: "\f3ed" !important; }
@@ -106,13 +109,49 @@
         }
 
         #contact-list li:hover a.text-link {
-            color: #319795 !important; /* Destaque ao passar o mouse */
+            color: #319795 !important; 
             text-decoration: underline !important;
         }
 
         #contact-list li:active {
             transform: scale(0.98) translateX(6px) !important;
         }
+
+        /* 2. ADIÇÃO DE ÍCONES NO MENU DE NAVEGAÇÃO INTERNA VIA CSS */
+        /* Procura pelos links do menu com base no texto deles */
+        header a, nav a, .text-white a {
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        /* Cria o espaço e puxa a fonte do Bootstrap Icons */
+        header a::before, nav a::before {
+            font-family: "bootstrap-icons" !important;
+            margin-right: 8px;
+            color: #319795; /* Destaca em turquesa do Tokito */
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Ícone para Perfil (Bonequinho) */
+        header a:contains("Perfil")::before, 
+        nav a[href*="perfil"]::before,
+        a:has(text):contains("Perfil")::before { content: "\f4da"; } 
+
+        /* Ícone para Mapa de carreira (Mapa/Caminho) */
+        header a:contains("carreira")::before, 
+        nav a[href*="carreira"]::before,
+        a:contains("Mapa")::before { content: "\f5c1"; }
+
+        /* Ícone para Habilidades (Raios/Estrela/Engrenagem) */
+        header a:contains("Habilidades")::before, 
+        nav a[href*="habilidades"]::before,
+        a:contains("Habilidades")::before { content: "\f57b"; }
+
+        /* Ícone para Idiomas (Globo/Conversa) */
+        header a:contains("Idiomas")::before, 
+        nav a[href*="idiomas"]::before,
+        a:contains("Idiomas")::before { content: "\f5c9"; }
 
         /* Botão do Currículo estilizado */
         .btn-primary, 
@@ -128,8 +167,8 @@
         .btn-primary:hover,
         a[href*="Curriculo.pdf"]:hover {
             transform: translateY(-2px) !important; 
-            background-color: #319795 !important; /* Turquesa Tokito ao passar o mouse */
-            box-shadow: 0 8px 20px rgba(49, 151, 149, 0.5) !important; /* Sombra turquesa corrigida! */
+            background-color: #319795 !important; 
+            box-shadow: 0 8px 20px rgba(49, 151, 149, 0.5) !important; 
             filter: brightness(1.1); 
         }
 
@@ -162,7 +201,6 @@
             border-radius: 8px;
         }
 
-        /* Hover dos Badges/Habilidades corrigido (Roxo removido de vez!) */
         .list-inline-item .badge, #other-skills .badge {
             transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
             cursor: default;
@@ -171,7 +209,7 @@
         .list-inline-item .badge:hover, #other-skills .badge:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 4px 12px rgba(49, 151, 149, 0.35);
-            background-color: #319795 !important; /* Agora sim, turquesa legítimo */
+            background-color: #319795 !important; 
             color: #ffffff !important;
         }
 
@@ -186,15 +224,14 @@
         }
 
         /* ==========================================================================
-           3. ATUALIZADO: NÉVOA INTENSA COM FUNDO EQUILIBRADO (Fumaça perceptível)
+           3. NÉVOA INTENSA COM FUNDO EQUILIBRADO
            ========================================================================== */
         body {
-            background-color: #1a2233 !important; /* Tom cinza-azulado escuro e suave, menos "dark" puro */
+            background-color: #1a2233 !important; 
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Camadas de névoa orgânica com opacidade aumentada para ficar bem evidente */
         body::before, body::after {
             content: "";
             position: fixed;
@@ -203,7 +240,7 @@
             height: 120vh;
             z-index: -1;
             pointer-events: none;
-            filter: blur(70px); /* Levemente menos borrado para a fumaça tomar mais corpo */
+            filter: blur(70px); 
             animation: respiracaoNevoa 10s ease-in-out infinite alternate;
         }
 
@@ -221,7 +258,7 @@
         @keyframes respiracaoNevoa {
             0% {
                 transform: translateY(-5%) translateX(-2%) scale(1) rotate(0deg);
-                opacity: 0.6; /* Névoa mais presente */
+                opacity: 0.6; 
             }
             50% {
                 opacity: 0.9;
@@ -238,7 +275,6 @@
             border-bottom: 3px solid #2C7A7B;
         }
 
-        /* Títulos principais em Turquesa de Alerta */
         h2, .text-primary, #main-content h3 {
             color: #2C7A7B !important;
         }
