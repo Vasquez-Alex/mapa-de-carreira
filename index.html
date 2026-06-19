@@ -28,8 +28,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-5.css">
 	<style>
-
-        .skip-link {
+		.skip-link {
             left: 1rem;
             position: absolute;
             top: -4rem;
@@ -40,10 +39,14 @@
             top: 1rem;
         }
 
+        /* 1. ATUALIZADO: FOTO PERFEITAMENTE REDONDA COM BORDA */
         .profile-picture {
             height: 220px;
-            object-fit: cover;
             width: 220px;
+            object-fit: cover;
+            border-radius: 50% !important; /* Torna redonda */
+            border: 4px solid #ffffff !important; /* Borda branca de destaque */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .badge {
@@ -79,7 +82,11 @@
             pointer-events: none !important;
         }
 
-        #contact-list li:has(a[href^="mailto"]):::before { content: "\f32e" !important; }
+        /* 2. ATUALIZADO: DESTACANDO O ÍCONE DO EMAIL COM TURQUESA MAIS VIBRANTE NO FUNDO */
+        #contact-list li:has(a[href^="mailto"])::before { 
+            content: "\f32e" !important; 
+            color: #4fd1c5 !important; /* Turquesa neon para dar contraste */
+        }
         #contact-list li:has(a[href*="linkedin"])::before { content: "\f472" !important; }
         #contact-list li:has(a[href*="github"])::before { content: "\f3ed" !important; }
 
@@ -179,15 +186,15 @@
         }
 
         /* ==========================================================================
-           A NÉVOA INTENSA (Efeito Dinâmico de Fundo)
+           3. ATUALIZADO: NÉVOA INTENSA COM FUNDO EQUILIBRADO (Fumaça perceptível)
            ========================================================================== */
         body {
-            background-color: #0b0f19 !important; /* Fundo geral escuro para destacar a névoa */
+            background-color: #1a2233 !important; /* Tom cinza-azulado escuro e suave, menos "dark" puro */
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Camadas de névoa orgânica se movendo pelas laterais e por trás do card */
+        /* Camadas de névoa orgânica com opacidade aumentada para ficar bem evidente */
         body::before, body::after {
             content: "";
             position: fixed;
@@ -196,32 +203,32 @@
             height: 120vh;
             z-index: -1;
             pointer-events: none;
-            filter: blur(80px); /* Desfoque maior para parecer fumaça/névoa */
+            filter: blur(70px); /* Levemente menos borrado para a fumaça tomar mais corpo */
             animation: respiracaoNevoa 10s ease-in-out infinite alternate;
         }
 
         body::before {
-            left: -10vw;
-            background: radial-gradient(circle, rgba(49, 151, 149, 0.35) 0%, rgba(26, 32, 44, 0.6) 50%, rgba(0,0,0,0) 100%);
+            left: -5vw;
+            background: radial-gradient(circle, rgba(79, 209, 197, 0.45) 0%, rgba(26, 32, 44, 0.7) 60%, rgba(0,0,0,0) 100%);
         }
 
         body::after {
-            right: -10vw;
-            background: radial-gradient(circle, rgba(44, 122, 123, 0.25) 0%, rgba(11, 15, 25, 0.7) 60%, rgba(0,0,0,0) 100%);
+            right: -5vw;
+            background: radial-gradient(circle, rgba(49, 151, 149, 0.35) 0%, rgba(26, 32, 44, 0.8) 60%, rgba(0,0,0,0) 100%);
             animation-delay: -5s;
         }
 
         @keyframes respiracaoNevoa {
             0% {
                 transform: translateY(-5%) translateX(-2%) scale(1) rotate(0deg);
-                opacity: 0.5;
+                opacity: 0.6; /* Névoa mais presente */
             }
             50% {
-                opacity: 0.8;
+                opacity: 0.9;
             }
             100% {
                 transform: translateY(5%) translateX(3%) scale(1.15) rotate(3deg);
-                opacity: 0.6;
+                opacity: 0.7;
             }
         }
 
