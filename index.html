@@ -28,30 +28,34 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-5.css">
 	<style>
-		.skip-link {
-			left: 1rem;
-			position: absolute;
-			top: -4rem;
-			z-index: 1000;
-		}
 
-		.skip-link:focus {
-			top: 1rem;
-		}
+        .skip-link {
+            left: 1rem;
+            position: absolute;
+            top: -4rem;
+            z-index: 1000;
+        }
 
-		.profile-picture {
-			height: 220px;
-			object-fit: cover;
-			width: 220px;
-		}
+        .skip-link:focus {
+            top: 1rem;
+        }
 
-		.badge {
-			margin-bottom: .35rem;
-		}
+        .profile-picture {
+            height: 220px;
+            object-fit: cover;
+            width: 220px;
+        }
+
+        .badge {
+            margin-bottom: .35rem;
+            background-color: #2D3748 !important; /* Fundo escuro estilo Demon Slayer */
+            border: 1px solid #319795 !important;
+            color: #ffffff !important;
+        }
 
         #contact-list li {
             position: relative;
-            padding-left: 28px !important; /* Espaço exato para o ícone oficial */
+            padding-left: 28px !important; 
             margin-bottom: 0.6rem !important;
             display: flex !important;
             align-items: center !important;
@@ -71,28 +75,16 @@
             position: absolute;
             left: 0;
             font-size: 1.1rem !important;
-            color: #ffffff !important; 
+            color: #319795 !important; /* Ícones agora brilham em turquesa */
             pointer-events: none !important;
         }
 
-        #contact-list li:has(a[href^="mailto"])::before {
-            content: "\f32e" !important; 
-        }
-
-        #contact-list li:has(a[href*="linkedin"])::before {
-            content: "\f472" !important; 
-        }
-
-        #contact-list li:has(a[href*="github"])::before {
-            content: "\f3ed" !important; 
-        }
+        #contact-list li:has(a[href^="mailto"]):::before { content: "\f32e" !important; }
+        #contact-list li:has(a[href*="linkedin"])::before { content: "\f472" !important; }
+        #contact-list li:has(a[href*="github"])::before { content: "\f3ed" !important; }
 
         #contact-list li:hover {
             transform: translateX(6px) !important;
-        }
-
-        #contact-list li:hover {
-            transform: translateX(6px); 
         }
 
         #contact-list li a {
@@ -101,13 +93,13 @@
         }
 
         #contact-list a.text-link {
-            color: rgba(255, 255, 255, 0.85) !important;
+            color: rgba(255, 255, 255, 0.9) !important;
             text-decoration: none !important;
             transition: color 0.2s ease-in-out !important;
         }
 
         #contact-list li:hover a.text-link {
-            color: #ffffff !important;
+            color: #319795 !important; /* Destaque ao passar o mouse */
             text-decoration: underline !important;
         }
 
@@ -115,24 +107,28 @@
             transform: scale(0.98) translateX(6px) !important;
         }
 
+        /* Botão do Currículo estilizado */
         .btn-primary, 
         a[href*="Curriculo.pdf"],
         button:has(text) { 
+            background-color: #1A202C !important;
+            border-color: #319795 !important;
+            color: #ffffff !important;
             transition: all 0.25s ease-in-out !important;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
         }
 
         .btn-primary:hover,
         a[href*="Curriculo.pdf"]:hover {
             transform: translateY(-2px) !important; 
-            box-shadow: 0 5px 15px rgba(89, 87, 142, 0.4) !important; 
+            background-color: #319795 !important; /* Turquesa Tokito ao passar o mouse */
+            box-shadow: 0 8px 20px rgba(49, 151, 149, 0.5) !important; /* Sombra turquesa corrigida! */
             filter: brightness(1.1); 
         }
 
         .btn-primary:active,
         a[href*="Curriculo.pdf"]:active {
             transform: translateY(1px) !important;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
         }
 
         #language-list li {
@@ -156,13 +152,10 @@
 
         .resume-section {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 6px;
+            border-radius: 8px;
         }
 
-        .resume-section:hover {
-            transform: scale(1.01);
-        }
-
+        /* Hover dos Badges/Habilidades corrigido (Roxo removido de vez!) */
         .list-inline-item .badge, #other-skills .badge {
             transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
             cursor: default;
@@ -170,8 +163,8 @@
 
         .list-inline-item .badge:hover, #other-skills .badge:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 4px 8px rgba(89, 87, 142, 0.25);
-            background-color: #59578E !important; 
+            box-shadow: 0 4px 12px rgba(49, 151, 149, 0.35);
+            background-color: #319795 !important; /* Agora sim, turquesa legítimo */
             color: #ffffff !important;
         }
 
@@ -185,83 +178,68 @@
             transform: translateY(-2px);
         }
 
-		/* 1. Efeito de Névoa Animada no Fundo das Laterais (Body) */
-		body {
-			background-color: #f4f7f6 !important;
-			position: relative;
-			overflow-x: hidden;
-		}
+        /* ==========================================================================
+           A NÉVOA INTENSA (Efeito Dinâmico de Fundo)
+           ========================================================================== */
+        body {
+            background-color: #0b0f19 !important; /* Fundo geral escuro para destacar a névoa */
+            position: relative;
+            overflow-x: hidden;
+        }
 
-		body::before, body::after {
-			content: "";
-			position: fixed;
-			top: 0;
-			width: 300px;
-			height: 100%;
-			z-index: -1; /* Fica atrás do container branco */
-			pointer-events: none;
-			opacity: 0.4;
-			filter: blur(40px);
-			animation: respiracaoNevoa 8s ease-in-out infinite alternate;
-		}
+        /* Camadas de névoa orgânica se movendo pelas laterais e por trás do card */
+        body::before, body::after {
+            content: "";
+            position: fixed;
+            top: -10%;
+            width: 50vw;
+            height: 120vh;
+            z-index: -1;
+            pointer-events: none;
+            filter: blur(80px); /* Desfoque maior para parecer fumaça/névoa */
+            animation: respiracaoNevoa 10s ease-in-out infinite alternate;
+        }
 
-		body::before {
-			left: -50px;
-			background: radial-gradient(circle, rgba(49, 151, 149, 0.4) 0%, rgba(255,255,255,0) 70%);
-		}
+        body::before {
+            left: -10vw;
+            background: radial-gradient(circle, rgba(49, 151, 149, 0.35) 0%, rgba(26, 32, 44, 0.6) 50%, rgba(0,0,0,0) 100%);
+        }
 
-		body::after {
-			right: -50px;
-			background: radial-gradient(circle, rgba(44, 122, 123, 0.3) 0%, rgba(255,255,255,0) 70%);
-			animation-delay: -4s; 
-		}
+        body::after {
+            right: -10vw;
+            background: radial-gradient(circle, rgba(44, 122, 123, 0.25) 0%, rgba(11, 15, 25, 0.7) 60%, rgba(0,0,0,0) 100%);
+            animation-delay: -5s;
+        }
 
-		/* Animação do movimento sutil de névoa */
-		@keyframes respiracaoNevoa {
-			0% {
-				transform: translateY(-5%) scale(1) skewX(-5deg);
-				opacity: 0.3;
-			}
-			100% {
-				transform: translateY(5%) scale(1.1) skewX(5deg);
-				opacity: 0.55;
-			}
-		}
+        @keyframes respiracaoNevoa {
+            0% {
+                transform: translateY(-5%) translateX(-2%) scale(1) rotate(0deg);
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(5%) translateX(3%) scale(1.15) rotate(3deg);
+                opacity: 0.6;
+            }
+        }
 
-		/* 2. Alteração de Cores para o Tom de Uniforme Demon Slayer e Turquesa */
+        /* Cabeçalho Demon Slayer */
+        .bg-primary, header, [style*="background-color"] {
+            background-color: #161a23 !important; 
+            border-bottom: 3px solid #2C7A7B;
+        }
 
-		/* Cabeçalho principal do perfil */
-		.bg-primary, header, [style*="background-color"] {
-			background-color: #1A202C !important; /* Cinza Escuro Profundo (Uniforme) */
-		}
+        /* Títulos principais em Turquesa de Alerta */
+        h2, .text-primary, #main-content h3 {
+            color: #2C7A7B !important;
+        }
 
-		/* Botão de PDF e destaques do Roadmap */
-		.btn-primary, 
-		a[href*="Curriculo.pdf"],
-		.badge, 
-		[class*="badge"] {
-			background-color: #2D3748 !important; /* Cor de base dos botões */
-			border-color: #319795 !important;
-			color: #ffffff !important;
-		}
-
-		/* Efeito Hover nos Botões com o Turquesa do Tokito */
-		.btn-primary:hover,
-		a[href*="Curriculo.pdf"]:hover {
-			background-color: #319795 !important; /* Verde-água característico */
-			box-shadow: 0 4px 12px rgba(49, 151, 149, 0.4) !important;
-		}
-
-		/* Títulos das Seções e pontos do Mapa de Carreira */
-		h2, .text-primary, #main-content h3 {
-			color: #2C7A7B !important;
-		}
-
-		/* Ajuste específico para a bola do marcador da linha do tempo */
-		.timeline-badge, [class*="timeline"]::before {
-			border-color: #319795 !important;
-			background-color: #319795 !important;
-		}
+        .timeline-badge, [class*="timeline"]::before {
+            border-color: #319795 !important;
+            background-color: #319795 !important;
+        }
 		
 	</style>
 </head>
