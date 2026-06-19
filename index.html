@@ -39,6 +39,7 @@
             top: 1rem;
         }
 
+        /* 1. FOTO DE PERFIL RESPONSIVA */
         .profile-picture {
             width: 220px !important;
             min-width: 220px !important;
@@ -59,6 +60,7 @@
             color: #ffffff !important;
         }
 
+        /* 2. LISTA DE CONTATOS OFICIAIS */
         #contact-list li {
             position: relative;
             padding-left: 28px !important; 
@@ -116,35 +118,49 @@
             transform: scale(0.98) translateX(6px) !important;
         }
 
-        header a, nav a, .text-white a {
+        /* 3. ALINHAMENTO DAS OPÇÕES DO MENU */
+        .resume-social {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            gap: 15px !important; /* Espaçamento limpo e moderno entre os links */
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .resume-social a {
             position: relative;
-            transition: all 0.2s ease;
+            text-decoration: none !important;
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-size: 0.95rem !important;
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            transition: all 0.25s ease-in-out !important;
         }
 
-        header a::before, nav a::before {
-            font-family: "bootstrap-icons" !important;
-            margin-right: 8px;
-            color: #319795; /* Destaca em turquesa do Tokito */
-            display: inline-block;
-            vertical-align: middle;
+        .resume-social a i {
+            margin-right: 6px !important;
+            font-size: 1.05rem !important;
+            transition: transform 0.2s ease !important;
         }
 
-        header a:contains("Perfil")::before, 
-        nav a[href*="perfil"]::before,
-        a:has(text):contains("Perfil")::before { content: "\f4da"; } 
+        .resume-social a:hover {
+            color: #319795 !important;
+            transform: translateY(-2px) !important;
+        }
 
-        header a:contains("carreira")::before, 
-        nav a[href*="carreira"]::before,
-        a:contains("Mapa")::before { content: "\f5c1"; }
+        /* Ajuste para telas menores: empilha o menu se faltar espaço */
+        @media (max-width: 767px) {
+            .resume-social {
+                justify-content: center !important;
+                flex-wrap: wrap !important;
+                gap: 10px !important;
+                margin-top: 15px !important;
+            }
+        }
 
-        header a:contains("Habilidades")::before, 
-        nav a[href*="habilidades"]::before,
-        a:contains("Habilidades")::before { content: "\f57b"; }
-
-        header a:contains("Idiomas")::before, 
-        nav a[href*="idiomas"]::before,
-        a:contains("Idiomas")::before { content: "\f5c9"; }
-
+        /* 4. COMPONENTES GERAIS E BOTÕES */
         .btn-primary, 
         a[href*="Curriculo.pdf"],
         button:has(text) { 
@@ -204,16 +220,11 @@
             color: #ffffff !important;
         }
 
-        .resume-social a {
-            display: inline-block;
-            transition: transform 0.2s ease, color 0.2s ease;
-            text-decoration: none;
-        }
-
         .resume-social a:hover {
             transform: translateY(-2px);
         }
 
+        /* 5. NÉVOA TOKITO E CORES DO TEMA */
         body {
             background-color: #1a2233 !important; 
             position: relative;
@@ -270,42 +281,6 @@
             border-color: #319795 !important;
             background-color: #319795 !important;
         }
-
-		/* 1. Alinha o container das opções para o desktop */
-		header nav, 
-		header .text-white,
-		header div:has(a[href^="#"]) {
-			display: inline-block !important;
-			width: auto !important;
-			white-space: nowrap !important;
-		}
-
-		/* 2. Formata e dá um espaçamento menor e cirúrgico em cada opção */
-		header a[href^="#"], 
-		nav a[href^="#"],
-		.text-white a[href^="#"] {
-			display: inline-flex !important;
-			align-items: center !important;
-			margin-left: 8px !important;  /* Reduzido para caber na linha original */
-			margin-right: 2px !important;
-			font-size: 0.95rem !important; /* Um tiquinho menor para dar o respiro necessário */
-			text-decoration: none !important;
-			transition: color 0.2s ease-in-out, transform 0.2s ease-in-out !important;
-		}
-
-		/* Margem menor ainda se a tela for média, garantindo que não caia */
-		@media (max-width: 1200px) {
-			header a[href^="#"] {
-				margin-left: 5px !important;
-				font-size: 0.9rem !important;
-			}
-		}
-
-		/* Efeito de hover suave */
-		header a[href^="#"]:hover, 
-		nav a[href^="#"]:hover {
-			transform: translateY(-1px) !important;
-		}
 		
 	</style>
 </head>
@@ -325,24 +300,24 @@
 						<img id="profile-photo" class="picture profile-picture" src="assets/images/alex_perfil.png" alt="">
 					</div>
 
-					<div class="col">
-						<div class="row p-4 justify-content-center justify-content-md-between">
-							<div class="primary-info col-auto">
-								<h1 id="profile-name" class="name mt-0 mb-1 text-white text-uppercase">Alexander Vasquez</h1>
-								<p id="profile-headline" class="title mb-3"></p>
-								<ul id="contact-list" class="list-unstyled"></ul>
-							</div>
+					<div class="col-12 col-md-8">
+                        <div class="row p-4 align-items-center justify-content-between">
+                            <div class="primary-info col-12 col-lg-7">
+                                <h1 id="profile-name" class="name mt-0 mb-1 text-white text-uppercase">Alexander Vasquez</h1>
+                                <p id="profile-headline" class="title mb-3"></p>
+                                <ul id="contact-list" class="list-unstyled"></ul>
+                            </div>
 
-							<nav class="secondary-info col-auto mt-2" aria-label="Navegacao principal">
-								<ul class="resume-social list-unstyled">
-									<a href="#perfil"><i class="bi bi-person-badge text-info"></i> Perfil</a>
-									<a href="#mapa"><i class="bi bi-map text-info"></i> Mapa de carreira</a>
-									<a href="#skills"><i class="bi bi-stars text-info"></i> Habilidades</a>
-									<a href="#idiomas"><i class="bi bi-globe2 text-info"></i> Idiomas</a>
-								</ul>
-							</nav>
-						</div>
-					</div>
+                            <nav class="secondary-info col-12 col-lg-5 text-lg-end mt-3 mt-lg-0" aria-label="Navegacao principal">
+                                <ul class="resume-social list-unstyled justify-content-lg-end">
+                                    <a href="#perfil"><i class="bi bi-person-badge text-info"></i> Perfil</a>
+                                    <a href="#mapa-carreira"><i class="bi bi-map text-info"></i> Mapa de carreira</a>
+                                    <a href="#habilidades"><i class="bi bi-stars text-info"></i> Habilidades</a>
+                                    <a href="#idiomas"><i class="bi bi-globe2 text-info"></i> Idiomas</a>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>
