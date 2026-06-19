@@ -271,32 +271,20 @@
             background-color: #319795 !important;
         }
 
-		@media (min-width: 992px) {
-		header, 
-		.text-white, 
-		[class*="navbar"], 
-		[class*="nav"] {
-			display: flex !important;
-			justify-content: flex-end !important; 
-			align-items: center !important; 
-			margin-left: auto !important; 
+		header a[href^="#"], 
+		nav a[href^="#"],
+		.text-white a[href^="#"] {
+			display: inline-block !important;
+			margin-left: 15px !important; 
+			margin-right: 5px !important;
+			white-space: nowrap !important; 
+			transition: color 0.2s ease-in-out, transform 0.2s ease-in-out !important;
 		}
 
-		header ul,
-		nav ul,
-		.list-inline {
-			margin-left: 0 !important;
-			padding-left: 0 !important;
-			margin-top: 0 !important;
-			display: flex !important;
-			align-items: center !important;
+		header a[href^="#"]:hover, 
+		nav a[href^="#"]:hover {
+			transform: translateY(-2px) !important; 
 		}
-
-    header li,
-    nav li,
-    .list-inline-item {
-        margin-left: 1rem !important;
-}
 		
 	</style>
 </head>
