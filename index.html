@@ -123,9 +123,15 @@
             display: flex !important;
             flex-direction: row !important;
             flex-wrap: nowrap !important;
-            gap: 15px !important; /* Espaçamento limpo e moderno entre os links */
+            gap: 16px !important; /* Espaço limpo entre os links */
             margin: 0 !important;
             padding: 0 !important;
+        }
+
+        @media (min-width: 992px) {
+            .resume-social {
+                justify-content: flex-end !important; /* Força os links para a extrema direita no PC */
+            }
         }
 
         .resume-social a {
@@ -139,15 +145,26 @@
             transition: all 0.25s ease-in-out !important;
         }
 
+        /* Cor dos ícones interna do menu */
         .resume-social a i {
             margin-right: 6px !important;
             font-size: 1.05rem !important;
-            transition: transform 0.2s ease !important;
+            color: #319795 !important; /* Turquesa Tokito oficial */
         }
 
         .resume-social a:hover {
             color: #319795 !important;
             transform: translateY(-2px) !important;
+        }
+
+        /* Mobile */
+        @media (max-width: 991px) {
+            .resume-social {
+                justify-content: center !important;
+                flex-wrap: wrap !important;
+                gap: 10px !important;
+                margin-top: 10px !important;
+            }
         }
 
         /* Ajuste para telas menores: empilha o menu se faltar espaço */
@@ -299,23 +316,24 @@
 					<div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
 						<img id="profile-photo" class="picture profile-picture" src="assets/images/alex_perfil.png" alt="">
 					</div>
-
-					<div class="col-12 col-md-8">
-                        <div class="row p-4 align-items-center justify-content-between">
+					<div class="col-12 col-md">
+                        <div class="row p-4 align-items-start justify-content-between">
+                            
                             <div class="primary-info col-12 col-lg-7">
                                 <h1 id="profile-name" class="name mt-0 mb-1 text-white text-uppercase">Alexander Vasquez</h1>
-                                <p id="profile-headline" class="title mb-3"></p>
+                                <p id="profile-headline" class="title mb-3 text-info font-weight-bold" style="color: #319795 !important;"></p>
                                 <ul id="contact-list" class="list-unstyled"></ul>
                             </div>
 
                             <nav class="secondary-info col-12 col-lg-5 text-lg-end mt-3 mt-lg-0" aria-label="Navegacao principal">
-                                <ul class="resume-social list-unstyled justify-content-lg-end">
-                                    <a href="#perfil"><i class="bi bi-person-badge text-info"></i> Perfil</a>
-                                    <a href="#mapa-carreira"><i class="bi bi-map text-info"></i> Mapa de carreira</a>
-                                    <a href="#habilidades"><i class="bi bi-stars text-info"></i> Habilidades</a>
-                                    <a href="#idiomas"><i class="bi bi-globe2 text-info"></i> Idiomas</a>
+                                <ul class="resume-social list-unstyled d-flex justify-content-lg-end gap-3" style="padding: 0; margin: 0;">
+                                    <a href="#perfil"><i class="bi bi-person-badge"></i> Perfil</a>
+                                    <a href="#mapa-carreira"><i class="bi bi-map"></i> Mapa de carreira</a>
+                                    <a href="#habilidades"><i class="bi bi-stars"></i> Habilidades</a>
+                                    <a href="#idiomas"><i class="bi bi-globe2"></i> Idiomas</a>
                                 </ul>
                             </nav>
+
                         </div>
                     </div>
 				</div>
