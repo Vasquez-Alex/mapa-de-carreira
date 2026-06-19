@@ -39,10 +39,9 @@
             top: 1rem;
         }
 
-        /* 1. CORREÇÃO DA FOTO: CÍRCULO PERFEITO NO MOBILE E PC */
         .profile-picture {
             width: 220px !important;
-            min-width: 220px !important; /* Trava para não esticar no mobile */
+            min-width: 220px !important;
             height: 220px !important;
             min-height: 220px !important;
             object-fit: cover;
@@ -55,7 +54,7 @@
 
         .badge {
             margin-bottom: .35rem;
-            background-color: #2D3748 !important; /* Fundo escuro estilo Demon Slayer */
+            background-color: #2D3748 !important; 
             border: 1px solid #319795 !important;
             color: #ffffff !important;
         }
@@ -82,7 +81,7 @@
             position: absolute;
             left: 0;
             font-size: 1.1rem !important;
-            color: #319795 !important; /* Ícones agora brilham em turquesa */
+            color: #319795 !important; 
             pointer-events: none !important;
         }
 
@@ -117,14 +116,11 @@
             transform: scale(0.98) translateX(6px) !important;
         }
 
-        /* 2. ADIÇÃO DE ÍCONES NO MENU DE NAVEGAÇÃO INTERNA VIA CSS */
-        /* Procura pelos links do menu com base no texto deles */
         header a, nav a, .text-white a {
             position: relative;
             transition: all 0.2s ease;
         }
 
-        /* Cria o espaço e puxa a fonte do Bootstrap Icons */
         header a::before, nav a::before {
             font-family: "bootstrap-icons" !important;
             margin-right: 8px;
@@ -133,27 +129,22 @@
             vertical-align: middle;
         }
 
-        /* Ícone para Perfil (Bonequinho) */
         header a:contains("Perfil")::before, 
         nav a[href*="perfil"]::before,
         a:has(text):contains("Perfil")::before { content: "\f4da"; } 
 
-        /* Ícone para Mapa de carreira (Mapa/Caminho) */
         header a:contains("carreira")::before, 
         nav a[href*="carreira"]::before,
         a:contains("Mapa")::before { content: "\f5c1"; }
 
-        /* Ícone para Habilidades (Raios/Estrela/Engrenagem) */
         header a:contains("Habilidades")::before, 
         nav a[href*="habilidades"]::before,
         a:contains("Habilidades")::before { content: "\f57b"; }
 
-        /* Ícone para Idiomas (Globo/Conversa) */
         header a:contains("Idiomas")::before, 
         nav a[href*="idiomas"]::before,
         a:contains("Idiomas")::before { content: "\f5c9"; }
 
-        /* Botão do Currículo estilizado */
         .btn-primary, 
         a[href*="Curriculo.pdf"],
         button:has(text) { 
@@ -223,9 +214,6 @@
             transform: translateY(-2px);
         }
 
-        /* ==========================================================================
-           3. NÉVOA INTENSA COM FUNDO EQUILIBRADO
-           ========================================================================== */
         body {
             background-color: #1a2233 !important; 
             position: relative;
@@ -269,7 +257,6 @@
             }
         }
 
-        /* Cabeçalho Demon Slayer */
         .bg-primary, header, [style*="background-color"] {
             background-color: #161a23 !important; 
             border-bottom: 3px solid #2C7A7B;
@@ -283,6 +270,33 @@
             border-color: #319795 !important;
             background-color: #319795 !important;
         }
+
+		@media (min-width: 992px) {
+		header, 
+		.text-white, 
+		[class*="navbar"], 
+		[class*="nav"] {
+			display: flex !important;
+			justify-content: flex-end !important; 
+			align-items: center !important; 
+			margin-left: auto !important; 
+		}
+
+		header ul,
+		nav ul,
+		.list-inline {
+			margin-left: 0 !important;
+			padding-left: 0 !important;
+			margin-top: 0 !important;
+			display: flex !important;
+			align-items: center !important;
+		}
+
+    header li,
+    nav li,
+    .list-inline-item {
+        margin-left: 1rem !important;
+}
 		
 	</style>
 </head>
