@@ -184,6 +184,84 @@
         .resume-social a:hover {
             transform: translateY(-2px);
         }
+
+		/* 1. Efeito de Névoa Animada no Fundo das Laterais (Body) */
+		body {
+			background-color: #f4f7f6 !important;
+			position: relative;
+			overflow-x: hidden;
+		}
+
+		body::before, body::after {
+			content: "";
+			position: fixed;
+			top: 0;
+			width: 300px;
+			height: 100%;
+			z-index: -1; /* Fica atrás do container branco */
+			pointer-events: none;
+			opacity: 0.4;
+			filter: blur(40px);
+			animation: respiracaoNevoa 8s ease-in-out infinite alternate;
+		}
+
+		body::before {
+			left: -50px;
+			background: radial-gradient(circle, rgba(49, 151, 149, 0.4) 0%, rgba(255,255,255,0) 70%);
+		}
+
+		body::after {
+			right: -50px;
+			background: radial-gradient(circle, rgba(44, 122, 123, 0.3) 0%, rgba(255,255,255,0) 70%);
+			animation-delay: -4s; 
+		}
+
+		/* Animação do movimento sutil de névoa */
+		@keyframes respiracaoNevoa {
+			0% {
+				transform: translateY(-5%) scale(1) skewX(-5deg);
+				opacity: 0.3;
+			}
+			100% {
+				transform: translateY(5%) scale(1.1) skewX(5deg);
+				opacity: 0.55;
+			}
+		}
+
+		/* 2. Alteração de Cores para o Tom de Uniforme Demon Slayer e Turquesa */
+
+		/* Cabeçalho principal do perfil */
+		.bg-primary, header, [style*="background-color"] {
+			background-color: #1A202C !important; /* Cinza Escuro Profundo (Uniforme) */
+		}
+
+		/* Botão de PDF e destaques do Roadmap */
+		.btn-primary, 
+		a[href*="Curriculo.pdf"],
+		.badge, 
+		[class*="badge"] {
+			background-color: #2D3748 !important; /* Cor de base dos botões */
+			border-color: #319795 !important;
+			color: #ffffff !important;
+		}
+
+		/* Efeito Hover nos Botões com o Turquesa do Tokito */
+		.btn-primary:hover,
+		a[href*="Curriculo.pdf"]:hover {
+			background-color: #319795 !important; /* Verde-água característico */
+			box-shadow: 0 4px 12px rgba(49, 151, 149, 0.4) !important;
+		}
+
+		/* Títulos das Seções e pontos do Mapa de Carreira */
+		h2, .text-primary, #main-content h3 {
+			color: #2C7A7B !important;
+		}
+
+		/* Ajuste específico para a bola do marcador da linha do tempo */
+		.timeline-badge, [class*="timeline"]::before {
+			border-color: #319795 !important;
+			background-color: #319795 !important;
+		}
 		
 	</style>
 </head>
